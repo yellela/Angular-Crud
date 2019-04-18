@@ -1,0 +1,18 @@
+
+<a routerLink="/mobile" class="add-mob">+AddMobile</a>
+<h1 class="font-fmly-airl text-center">MobileStore</h1>
+<table>
+  <th class="text-center">Id</th>
+  <th class="text-center">MobileName</th>
+  <th class="text-center">Price</th>
+  <th class="text-center">DeleteMobile</th>
+  <th class="text-center">UpdateMobile</th>
+  <tr *ngFor = 'let mobile of Mobiles'>
+    <td>{{mobile.id}}</td>
+    <td>{{mobile.MobileName}}</td>
+    <td>{{mobile.price}}</td>
+    <td class="text-center" (click) = "deleteMobile(mobile.id)"><a class="delete">Delete</a></td>
+    <td class="text-center"   [routerLink] = "['/updateMobile',mobile.id]"><a class="update">Update</a></td>
+  </tr>
+</table>
+

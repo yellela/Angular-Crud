@@ -1,0 +1,11 @@
+<a routerLink="/" class="add-mob"> << Back </a>
+
+<h1 class="text-center font-fmly-airl">UpdateMobile</h1>
+
+<p class = "font-fmly-airl pad-7" *ngIf = "!exist">MobileNotExist</p>
+
+<form id = "addMobileForm" name ="addNewMobile" #mobile = "ngForm" (ngSubmit) = "updateMobile(mobile.value)" >
+  <label class="font-fmly-airl font-size">MobileName:</label><input class="font-fmly-airl pad-7" type="text" id = "mobile" name="mobile" [(ngModel)]="data.MobileName" placeholder="MobileName" ngModel><br><br>
+  <label class="font-fmly-airl font-size mar-rgt">Price:</label><input class= "font-fmly-airl pad-7 " type="number" id = "Price" name="price" [(ngModel)] = "data.price" placeholder="Price" ngModel><br><br>
+  <input class="font-fmly-airl pad-left-right pad-7 " type="submit" value="updateMobile">
+</form>

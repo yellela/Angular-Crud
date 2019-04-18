@@ -1,0 +1,29 @@
+{
+  "Mobiles": [
+    {
+      "MobileName": "redmi",
+      "price": 1400,
+      "id": 3
+    },
+    {
+      "MobileName": "oneplus",
+      "price": 6000,
+      "id": 5
+    },
+    {
+      "MobileName": "BlackBarry",
+      "price": 5155,
+      "id": 6
+    },
+    {
+      "MobileName": "samsung",
+      "price": 2000,
+      "id": 7
+    },
+    {
+      "MobileName": "samsung",
+      "price": 1000,
+      "id": 8
+    }
+  ]
+}

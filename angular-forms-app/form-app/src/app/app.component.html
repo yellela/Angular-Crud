@@ -1,0 +1,43 @@
+<div class="">
+  <h2>ModelDrivenFrom</h2>
+  <form class="" [formGroup] = "form" (ngSubmit) = onSubmit(form.value) >
+    
+    <input class="form-ele" name= "UserName" type="text" placeholder="UserName" formControlName="UserName"><br><br>
+    <input  class= "form-ele" type="password" name="password" placeholder="Password" formControlName="password" ><br><br>
+    <select name="Gender" class="form-ele" style="width: 21%" aria-placeholder="Gender" formControlName="Gender" >
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Others">Others</option>
+    </select>
+    <br><br>
+    <input type="submit" value="submit" [disabled] = '!form.valid' class="form-ele btn-hvr" style="width: 21%"> 
+  </form>
+  </div>
+  
+<div class="" >
+  <h2>ValueConverter</h2>
+<form [formGroup] = "number" >
+
+    <input class="form-ele" name= "Decimal" type="number" placeholder="Decimal" 
+    (ngModelChange) = "decimalValueChange(oldvalue, newvalue = $event)"
+    formControlName="Decimal"><br><br>
+    <input  class= "form-ele" type="number" name="Binary" placeholder="Binary" 
+    (ngModelChange) = "binaryValueChange(oldvalue, newvalue = $event)"
+    formControlName="Binary" ><br><br>
+    <input class="form-ele" name= "Octal" type="number" placeholder="Octal"
+    (ngModelChange) = "octalValueChange(oldvalue, newvalue = $event)"
+    formControlName="Octal"><br><br>
+    <input  class= "form-ele" type="text" name="Hexa" placeholder="Hexa" 
+    (ngModelChange) = "hexaValueChange(oldvalue, newvalue = $event)"
+    formControlName="Hexa" ><br><br>
+
+</form>
+</div>
+
+<ul *ngFor = "let data of httpdata">
+  <li>Name : {{data.Name}} id: {{data.id}}</li>
+</ul>
+
+
+
+

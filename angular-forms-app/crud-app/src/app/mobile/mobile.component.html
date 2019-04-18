@@ -1,0 +1,10 @@
+<a routerLink="/" class="add-mob"> << Back </a>
+
+<h1 class="text-center font-fmly-airl">AddMobile</h1>
+
+<form id = "addMobileForm" name ="addNewMobile" #mobile = "ngForm" (ngSubmit) = "addNewMobile(mobile.value)" >
+  <label class="font-fmly-airl font-size">MobileName:</label><input class="font-fmly-airl pad-7" type="text" id = "mobile" name="mobile" placeholder="MobileName" ngModel><br><br>
+  <label class="font-fmly-airl font-size mar-rgt">Price:</label><input class= "font-fmly-airl pad-7 " type="number" id = "Price" name="price" placeholder="Price" ngModel><br><br>
+  <input class="font-fmly-airl pad-left-right pad-7 " type="submit" value="AddMobile">
+</form>
+<span class = "font-fmly-airl pad-7" *ngIf = "isAdded">{{conformationstring}}</span>
